@@ -1,6 +1,3 @@
-const header = document.querySelector('header');
-const section = document.querySelector('section');
-
 const requestURL = 'https://raw.githubusercontent.com/Kurosios/Time-tracking-dashboard/main/data.json';
 const request = new XMLHttpRequest();
 request.open('GET', requestURL);
@@ -22,23 +19,38 @@ function crear (jsonObj) {
     for (var i = 0; i < jsonObj.length; i++) {
     const myPara1 = document.createElement('div');
     myPara1.classList = "title";
-    myPara1.textContent = 'title: ' + jsonObj[i].title
+    myPara1.textContent =  jsonObj[i].title
     card[i].appendChild(myPara1);
 
-    const myPara2 = document.createElement('div');
-    myPara2.classList = "daily";
-    myPara2.textContent = ' // daily: current ' + jsonObj[i].timeframes.daily.current + ' previous: ' + jsonObj[i].timeframes.daily.previous;
-    card[i].appendChild(myPara2);
+    const myParaDCurrent= document.createElement('div');
+    myParaDCurrent.classList = "daily current";
+    myParaDCurrent.textContent = jsonObj[i].timeframes.daily.current + ' hrs ' ;
+    card[i].appendChild(myParaDCurrent);
 
-    const myPara3 = document.createElement('div');
-    myPara3.classList= "weekly esconder";
-    myPara3.textContent = ' // weekly: current ' + jsonObj[i].timeframes.weekly.current + ' previous: ' + jsonObj[i].timeframes.weekly.previous
-    card[i].appendChild(myPara3);
+    const myParaDPrevious = document.createElement('div');
+    myParaDPrevious.classList = "daily previous";
+    myParaDPrevious.textContent = 'Last day - ' + jsonObj[i].timeframes.daily.previous +' hrs' ;
+    card[i].appendChild(myParaDPrevious);
 
-    const myPara4 = document.createElement('div');
-    myPara4.classList = "monthly esconder";
-    myPara4.textContent = ' // monthly: current ' + jsonObj[i].timeframes.monthly.current + ' previous: ' + jsonObj[i].timeframes.monthly.previous
-    card[i].appendChild(myPara4);
+    const myParaWCurrent = document.createElement('div');
+    myParaWCurrent.classList= "weekly current esconder";
+    myParaWCurrent.textContent =  jsonObj[i].timeframes.weekly.current + ' hrs ';
+    card[i].appendChild(myParaWCurrent);
+
+    const myParaWPrevious = document.createElement('div');
+    myParaWPrevious.classList= "weekly previous esconder";
+    myParaWPrevious.textContent ='Last Week - ' + jsonObj[i].timeframes.weekly.previous +' hrs' ;
+    card[i].appendChild(myParaWPrevious);
+
+    const myParaMCurrent= document.createElement('div');
+    myParaMCurrent.classList = "monthly current esconder";
+    myParaMCurrent.textContent = jsonObj[i].timeframes.monthly.current + ' hrs ';
+    card[i].appendChild(myParaMCurrent);
+
+    const myParaMPrevious = document.createElement('div');
+    myParaMPrevious.classList = "monthly previous esconder";
+    myParaMPrevious.textContent = 'Last month - ' + jsonObj[i].timeframes.monthly.previous +' hrs' ;
+    card[i].appendChild(myParaMPrevious);
 }
 
 
@@ -97,4 +109,6 @@ function crear (jsonObj) {
      
 
     }
+
+
 
