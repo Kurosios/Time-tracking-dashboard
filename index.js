@@ -39,7 +39,7 @@ function crear (jsonObj) {
 }
 };
 
-window.addEventListener('load', function() {
+window.addEventListener('load', ()=> {
   let diario = document.querySelector(".d");
    let semanal = document.querySelector(".s");
    let mensual = document.querySelector(".m");
