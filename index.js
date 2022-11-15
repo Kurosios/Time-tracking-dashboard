@@ -1,6 +1,3 @@
-const header = document.querySelector('header');
-const section = document.querySelector('section');
-
 const requestURL = 'https://raw.githubusercontent.com/Kurosios/Time-tracking-dashboard/main/data.json';
 const request = new XMLHttpRequest();
 request.open('GET', requestURL);
@@ -43,7 +40,7 @@ function crear (jsonObj) {
 };
 
 window.addEventListener('load', function() {
-    let diario = document.querySelector(".d");
+  let diario = document.querySelector(".d");
    let semanal = document.querySelector(".s");
    let mensual = document.querySelector(".m");
    const dias = document.querySelectorAll(".daily");
@@ -96,4 +93,5 @@ window.addEventListener('load', function() {
    )
    
    })
+
 
