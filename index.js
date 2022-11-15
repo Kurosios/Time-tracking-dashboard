@@ -1,3 +1,4 @@
+
 const requestURL = 'https://raw.githubusercontent.com/Kurosios/Time-tracking-dashboard/main/data.json';
 const request = new XMLHttpRequest();
 request.open('GET', requestURL);
@@ -24,32 +25,32 @@ function crear (jsonObj) {
 
     const myParaDCurrent= document.createElement('div');
     myParaDCurrent.classList = "daily current";
-    myParaDCurrent.textContent = jsonObj[i].timeframes.daily.current + ' hrs ' ;
+    myParaDCurrent.textContent = jsonObj[i].timeframes.daily.current + 'hrs ' ;
     card[i].appendChild(myParaDCurrent);
 
     const myParaDPrevious = document.createElement('div');
     myParaDPrevious.classList = "daily previous";
-    myParaDPrevious.textContent = 'Last day - ' + jsonObj[i].timeframes.daily.previous +' hrs' ;
+    myParaDPrevious.textContent = 'Last day - ' + jsonObj[i].timeframes.daily.previous +'hrs' ;
     card[i].appendChild(myParaDPrevious);
 
     const myParaWCurrent = document.createElement('div');
     myParaWCurrent.classList= "weekly current esconder";
-    myParaWCurrent.textContent =  jsonObj[i].timeframes.weekly.current + ' hrs ';
+    myParaWCurrent.textContent =  jsonObj[i].timeframes.weekly.current + 'hrs ';
     card[i].appendChild(myParaWCurrent);
 
     const myParaWPrevious = document.createElement('div');
     myParaWPrevious.classList= "weekly previous esconder";
-    myParaWPrevious.textContent ='Last Week - ' + jsonObj[i].timeframes.weekly.previous +' hrs' ;
+    myParaWPrevious.textContent ='Last Week - ' + jsonObj[i].timeframes.weekly.previous +'hrs' ;
     card[i].appendChild(myParaWPrevious);
 
     const myParaMCurrent= document.createElement('div');
     myParaMCurrent.classList = "monthly current esconder";
-    myParaMCurrent.textContent = jsonObj[i].timeframes.monthly.current + ' hrs ';
+    myParaMCurrent.textContent = jsonObj[i].timeframes.monthly.current + 'hrs ';
     card[i].appendChild(myParaMCurrent);
 
     const myParaMPrevious = document.createElement('div');
     myParaMPrevious.classList = "monthly previous esconder";
-    myParaMPrevious.textContent = 'Last month - ' + jsonObj[i].timeframes.monthly.previous +' hrs' ;
+    myParaMPrevious.textContent = 'Last month - ' + jsonObj[i].timeframes.monthly.previous +'hrs' ;
     card[i].appendChild(myParaMPrevious);
 }
 
@@ -109,6 +110,9 @@ function crear (jsonObj) {
      
 
     }
+
+
+
 
 
 
