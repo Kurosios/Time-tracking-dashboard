@@ -125,12 +125,13 @@
 }
 
 .previous{
+   
     font-size: 10px;
 
 }
 
 .small-card:hover{
-
+    
     background:hsl(235, 45%, 61%);
     transition: all 0.5s;
 
@@ -185,5 +186,11 @@
     font-family: 'Rubik', sans-serif;
     font-size:15px;
     cursor:pointer;
-
+    width:40px;
+    color: hsl(236, 100%, 87%);
 }
+
+
+.botones:target { color: #ffa; }
+
+
