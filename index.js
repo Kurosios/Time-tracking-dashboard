@@ -1,3 +1,6 @@
+const header = document.querySelector('header');
+const section = document.querySelector('section');
+
 const requestURL = 'https://raw.githubusercontent.com/Kurosios/Time-tracking-dashboard/main/data.json';
 const request = new XMLHttpRequest();
 request.open('GET', requestURL);
@@ -37,61 +40,61 @@ function crear (jsonObj) {
     myPara4.textContent = ' // monthly: current ' + jsonObj[i].timeframes.monthly.current + ' previous: ' + jsonObj[i].timeframes.monthly.previous
     card[i].appendChild(myPara4);
 }
-};
 
-window.addEventListener('load', ()=> {
-  let diario = document.querySelector(".d");
-   let semanal = document.querySelector(".s");
-   let mensual = document.querySelector(".m");
-   const dias = document.querySelectorAll(".daily");
-   const semanas = document.querySelectorAll(".weekly");
-   const meses = document.querySelectorAll(".monthly");
-   
-   console.log(dias)
-   
-   diario = diario.addEventListener("click",()=>{
-   
-       for(let i = 0; i < dias.length; i++){
-           dias[i].classList.remove('esconder')
-       }
-       for(let i = 0; i < semanas.length; i++){
-           semanas[i].classList.add('esconder')
-       }
-       for(let i = 0; i < meses.length; i++){
-           meses[i].classList.add('esconder')
-       }
-   
-   });
-   semanal = semanal.addEventListener("click",()=>{
-   
-       for(let i = 0; i < semanas.length; i++){
-           dias[i].classList.add('esconder')
-       }
-       for(let i = 0; i < semanas.length; i++){
-           semanas[i].classList.remove('esconder')
-       }
-       for(let i = 0; i < meses.length; i++){
-           meses[i].classList.add('esconder')
-       }
-   
-   }
-   )
-   
-   mensual = mensual.addEventListener("click",()=>{
-   
-       for(let i = 0; i < meses.length; i++){
-           dias[i].classList.add('esconder')
-       }
-       for(let i = 0; i < semanas.length; i++){
-           semanas[i].classList.add('esconder')
-       }
-       for(let i = 0; i < meses.length; i++){
-           meses[i].classList.remove('esconder')
-       }
-   
-   }
-   )
-   
-   })
 
+    let diario = document.querySelector(".d");
+     let semanal = document.querySelector(".s");
+     let mensual = document.querySelector(".m");
+     const dias = document.querySelectorAll(".daily");
+     const semanas = document.querySelectorAll(".weekly");
+     const meses = document.querySelectorAll(".monthly");
+     
+     console.log(dias)
+     
+     diario = diario.addEventListener("click",()=>{
+     
+         for(let i = 0; i < dias.length; i++){
+             dias[i].classList.remove('esconder')
+         }
+         for(let i = 0; i < semanas.length; i++){
+             semanas[i].classList.add('esconder')
+         }
+         for(let i = 0; i < meses.length; i++){
+             meses[i].classList.add('esconder')
+         }
+     
+     });
+  
+     semanal = semanal.addEventListener("click",()=>{
+     
+         for(let i = 0; i < semanas.length; i++){
+             dias[i].classList.add('esconder')
+         }
+         for(let i = 0; i < semanas.length; i++){
+             semanas[i].classList.remove('esconder')
+         }
+         for(let i = 0; i < meses.length; i++){
+             meses[i].classList.add('esconder')
+         }
+     
+     }
+     );
+     
+     mensual = mensual.addEventListener("click",()=>{
+     
+         for(let i = 0; i < meses.length; i++){
+             dias[i].classList.add('esconder')
+         }
+         for(let i = 0; i < semanas.length; i++){
+             semanas[i].classList.add('esconder')
+         }
+         for(let i = 0; i < meses.length; i++){
+             meses[i].classList.remove('esconder')
+         }
+     
+     }
+     );
+     
+
+    }
 
