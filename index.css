@@ -108,7 +108,27 @@
     margin-left:-100px;
     margin-top: -14px;
     background:hsl(235, 46%, 20%);
+    padding:20px 0px 0px 30px;
+    font-family: 'Rubik', sans-serif;
+    color:white;
+    font-size: 1;
 }
+
+.title{
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+.current{
+    font-size: 45px;
+    padding-bottom:10px ;
+
+}
+
+.previous{
+    font-size: 10px;
+
+}
+
 .small-card:hover{
 
     background:hsl(235, 45%, 61%);
